@@ -1,0 +1,95 @@
+{% extends "layouts/discuss.twig" %}
+
+{% block crumb %}
+<a href="{% url "/discuss" %}">Discuss</a> &raquo;
+<a href="$topic.forum.url">$topic.forum.name</a> &raquo;
+$topic.title
+{% endblock %}
+
+{% block content %}
+<h1>$topic.title</h1>
+<div class="topic-post">
+    <div class="details">
+        <h3>
+            <img class="gravatar-emblem" src="$topic.user.gravatar?s=24&amp;d=identicon" alt="Gravatar" />
+            $topic.user.login
+        </h3>
+        <ul>
+            <li><strong>Posts:</strong> $topic.user.message_count</li>
+            <li><strong>Topic Created:</strong> ${ topic.created_at | relative }</li>
+            {% if topic.updated %}
+            <li><strong>Topic Updated:</strong> ${ topic.updated_at | relative }</li>
+            {% endif %}
+        </ul>
+        {% if topic.editable or topic.deletable %}
+        <ul class="controls">
+            {% if topic.editable %}
+            <li>$topic.edit_link</li>
+            {% endif %}
+            {% if topic.deletable %}
+            <li>$topic.delete_link</li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="message">
+        $topic.description
+
+        {% if topic.attachments %}
+        <div class="attachments">
+            <h5>Attachments</h5>
+            <ul>
+                {% for attachment in topic.attachments %}
+                <li>
+                    $attachment.thumbnail
+                    <a href="${ attachment.path | uploaded }">$attachment.filename</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    <div class="clear"></div>
+</div>
+
+{% paginate 25 messages in topic.messages as message %}
+{% include "partials/message.twig" %}
+{% endpaginate %}
+
+{% if messages.pages > 1 %}
+<div class="pagination">
+    $messages.prev_link
+    $messages.next_link
+    <span class="nums sub">
+        Page <strong>$messages.page</strong> of <strong>$messages.pages</strong>
+    </span>
+</div>
+{% endif %}
+
+
+{% if visitor.group.can("add_message") %}
+<br />
+<br />
+<h1>${ "Reply" | translate("discuss") }</h1>
+<form action="{% url "add_message" %}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <fieldset>
+        <p>
+            <label for="body">${ "Body" | translate("discuss") }</label>
+            <textarea name="body" rows="8" cols="100%"></textarea>
+        </p>
+
+        <div id="attachments">
+            <label for="attachment">Attachment(s)</label>
+
+            <div class="fields">
+                <input type="file" name="attachment[]" /> <a class="add-attachment" href="javascript:void(0)">+</a>
+            </div>
+        </div>
+
+        <p><input type="submit" value="Continue &rarr;"></p>
+
+        <input type="hidden" name="topic_id" value="$topic.id" id="topic_id" />
+    </fieldset>
+</form>
+{% endif %}
+{% endblock %}

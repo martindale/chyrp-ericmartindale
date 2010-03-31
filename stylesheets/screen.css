@@ -1,0 +1,748 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+html, body {
+	/* background: #ccc url('http://www.ericmartindale.com/themes/ericmartindale/images/pattern.jpg'); */
+	background: #ccc;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size: 10pt;
+	color: #666;
+	line-height: 1.6667em;
+}
+
+p {
+	margin: 0 0 9px;
+	line-height: 1.6em;
+}
+
+a { color: #4477AA; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 {
+	font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+	text-transform: uppercase;
+}
+
+.toggler  { cursor:pointer;}
+.toggler:hover	 { background:#ccc;}
+.element { padding: 0 5px; }
+
+#eric {
+	float:left;
+	width:300px;
+	height:500px;
+	background: url('http://www.ericmartindale.com/images/eric-martindale.png') no-repeat -100px 0 ;
+}
+
+#content {
+	padding-top:10px;
+	float:left;
+	text-align:justify; 
+}
+
+#content h1 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#content h2 {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+	text-align: justify;
+	clear:both;
+}
+
+#content h3 {
+	padding-left: 20px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	text-align: justify;
+	clear:both;
+}
+
+#activity {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size: 11pt;
+	color: #666;
+}
+#activity * {
+	border: none;
+}
+#activity .entry {
+
+}
+#activity img {
+	display:none;
+}
+#activity img.icon {
+	display:inline;
+}
+
+#activity a { color: #4477AA; text-decoration: none; }
+#activity a:hover { text-decoration: underline; }
+
+
+#container {
+	background: #fff;
+	width: 850px;
+	margin-left: auto;
+	padding-left: 300px;
+	margin-right: auto;
+	padding:20px;
+}
+
+#content {
+	width: 75%;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+#content ul.blocklist{
+	list-style:none;
+}
+#content ul.blocklist a {
+	display:block;
+	padding: 5px;
+}
+#content ul.blocklist img {
+	padding-right:5px;
+}
+#content ul.blocklist a:hover {
+	text-decoration: none;
+	background: #ccc;
+}
+
+#content li {
+	padding-left:20px;
+}
+
+#header h1 {
+	margin-bottom:10px;
+}
+
+#header h2 {
+	font-size:0.75em;
+	padding-left: 50px;
+	height:50px;
+	background: url('http://www.ericmartindale.com/images/twitter.png') no-repeat left top;
+}
+#header h2 cite {
+	display:block;
+}
+
+#footer {
+	padding-top: 20px;
+	clear: both;
+	font-size: 0.7em;
+}
+
+#copyright {
+	text-align: right;
+}
+
+.foot {
+	float: left;
+	width: 33%;
+}
+
+#copyright  {
+	clear: both;
+}
+
+#menu {
+	margin-top: 25px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+#menu a {
+	padding: 5px;
+	font-weight: bold;
+	margin-right: 20px;
+	font-size: 1.5em;
+}
+
+#menu a:hover {
+	text-decoration: none;
+	background: #CCC;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#testimonials {
+	font-size: 0.9em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#introduction {
+	clear: both;
+}
+
+.testimonial {
+	float: left;
+	width: 45%;
+	padding: 10px;
+}
+
+.foot a {
+	display: block;
+}
+
+blockquote {
+  font: 0.8em Georgia, "Times New Roman", Times, serif;
+  background: url(http://www.ericmartindale.com/images/close-quote.gif) no-repeat right bottom;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-indent: -18px;
+}
+
+blockquote:first-letter {
+  background: url(http://www.ericmartindale.com/images/open-quote.gif) no-repeat left top;
+  padding-left: 18px;
+}
+
+input, textarea {
+	border: 1px solid #ccc;
+}
+
+/* Admin Controls */
+
+#controls {
+	background: #000;
+	color: #FFF;
+	line-height: 3.3333em;
+}
+#controls ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+#controls li {
+	display: inline;
+}
+#controls a {
+	color: #FFF;
+	margin-right: 1em;
+}
+#controls a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
+#header form {
+	float: right;
+	width: 200px;
+}
+#header input {
+	width: 190px;
+	height: 1.2em;
+	font-size: 1.2em;
+}
+
+/* Sidebar */
+
+#sidebar {
+	margin-top:20px;
+	margin-bottom:20px;
+	padding: 10px;
+	padding-top: 0px;
+	padding-right: 5px;
+	margin-right: -15px;
+	clear:both;
+	width: 22%;
+	float: right;
+	border-left: 1px solid #ccc;
+}
+#sidebar fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#sidebar a {
+	display:block;
+	padding: 5px;
+	padding-right: 5px;
+}
+#sidebar a:hover {
+	background: #ccc;
+	text-decoration: none;
+}
+#sidebar h1 {
+	font-family: Lucida Grande, Lucida Sans, Verdana, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 1.5em 0 0 0;
+	color: #666;
+}
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#sidebar li {
+	display:block;
+}
+
+#sidebar ul span {
+	display:block;
+	text-align:right;
+	font-size: 0.7em;
+}
+
+/* Content */
+
+.when {
+	font-size: 0.7em;
+}
+
+.post {
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #CCC;	
+}
+
+.post img, .post blockquote {
+	margin:10px;
+}
+
+.post .title {
+	margin: 0;
+}
+.post .info {
+	float: left;
+}
+.post .controls {
+	float: right;
+}
+
+.post.quote blockquote {
+	font-family: Georgia, serif;
+	margin: 0;
+	font-size: 1.1em;
+	line-height: 1.2222em;
+}
+.post.quote .source {
+	text-align: right;
+	display: block;
+	margin: 1.6667em 0;
+}
+
+/* Comments */
+
+#comments {
+	width: 500px;
+	float: right;
+	padding-top: 1.6667em;
+}
+ol.comments {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ol.comments li {
+	border-bottom: 1px solid #CCC;
+	margin-top: 1.6667em;
+}
+ol.comments blockquote {
+	margin: 0;
+	background: #FFF;
+}
+ol.comments cite {
+	font-style: normal;
+}
+ol.comments .edit_link, ol.comments .delete_link {
+	float: right;
+	margin-left: 1em;
+}
+form#add_comment {
+	padding-top: 10px;
+}
+
+/* Inline Editing */
+
+.inline_edit {
+	background: #CCC;
+	position: relative;
+}
+.inline_edit fieldset {
+	border: none;
+}
+.inline_edit a {
+}
+.inline_edit input[type="text"],
+.inline_edit textarea {
+}
+.inline_edit .more_options_link:link {
+}
+.inline_edit .more_options {
+}
+.inline_edit .more_options p {
+}
+.inline_edit .more_options p input[type="text"] {
+}
+.inline_edit .more_options p .sub {
+}
+.inline_edit .buttons {
+}
+.inline_edit h2 {
+}
+
+/* Next/prev */
+
+.nextprev {
+	margin-bottom: 1.6667em;
+}
+
+/* Paginate */
+
+.paginate {
+		text-align: center;
+		font-size:1.2em;
+		border-top: 1px solid #CCC;
+		padding-top: 20px;
+		padding-bottom: 20px;
+}
+.paginate a.next_page {
+	float: right;
+}
+.paginate a.prev_page {
+	float: left;
+}
+
+/* Footer */
+#footer {
+	border-top: 1px solid #CCC;
+}
+#footer a.atom {
+	float: right;
+	color: #FFF;
+	background: #000;
+	padding: 0 10px;
+}
+#footer a.atom:hover {
+	background: #03C;
+}
+
+/* General */
+
+#subscribe {
+	background: url('http://www.ericmartindale.com/themes/ericmartindale/images/feed-icon_orange-48px.png') no-repeat right;
+	width: 100%;
+	height:50px;
+	line-height:1em;
+}
+
+#subscribe a {
+	height:50px;
+	display:block;
+	text-decoration:none;
+}
+
+#subscribe a:hover {
+	background: none;
+}
+
+#subscribe span.header {
+	font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+	text-transform: uppercase;
+	display:block;
+	font-size: 1.5em;
+}
+
+#subscribe span {
+	padding-right:50px;
+	font-size: 0.8em;
+}
+
+
+.clear {
+    clear: both;
+}
+.right, .alignright {
+    float: right;
+}
+.left, .alignleft {
+    float: left;
+}
+#discuss {
+    }
+    #discuss .forum,
+    #extend .type {
+        height: 12em;
+        clear: both;
+        }
+        #discuss .forum h2,
+        #extend .type h2 {
+            float: left;
+            width: 10em;
+            height: 5em;
+            padding: .3625em;
+        }
+        #discuss .forum p,
+        #extend .type p {
+            padding: .75em;
+            display: block;
+        }
+        #discuss .forum .info,
+        #discuss .topic .info,
+        #extend .type .info {
+            float: left;
+            width: 20em;
+            }
+            #discuss .forum .info h4,
+            #discuss .topic .info h4,
+            #extend .type .info h4 {
+                display: block;
+                font-weight: normal;
+                font-size: 1em;
+                margin: 0 0 .5em;
+            }
+            #discuss .forum .info .content,
+            #discuss .topic .info .content,
+            #extend .type .info .content {
+                font-size: .9em;
+                line-height: 1.4em;
+                word-wrap: break-word;
+                margin: 0;
+                }
+                #discuss .forum .info .content li,
+                #discuss .topic .info .content li,
+                #extend .type .info .content li {
+                    list-style: none;
+                    }
+                    #discuss .forum .info .content li strong,
+                    #discuss .topic .info .content li strong,
+                    #extend .type .info .content li strong {
+                        font-weight: normal;
+    }
+    #discuss .topic {
+        min-height: 5em;
+        margin-bottom: 1em;
+        }
+        #discuss .topic .title {
+            width: 100%;
+            margin-right: 1em;
+            float: left;
+            padding: .3em;
+            word-wrap: break-word;
+            }
+            #discuss .topic .title h2 {
+                line-height: 1.125em;
+            }
+            #discuss .topic .title strong {
+                margin-top: -1em;
+                font-weight: normal;
+                font-size: .9em;
+                display: block;
+        }
+        #discuss .topic .info {
+            width: 18em;
+            float: right;
+    }
+    #discuss .topic-post {
+        margin: 0 0 3em;
+        }
+        #discuss .topic-post .message {
+        }
+        #discuss .topic-post .attachments h5 {
+            background: #0a0a0a;
+        }
+        #discuss .topic-post .attachments ul li {
+            border-color: #111;
+    }
+    #discuss .post {
+        margin: 0 0 1em;
+    }
+    #discuss .details {
+        float: left;
+        padding: .5em 1em 0 0;
+        text-align: right;
+        width: 15em;
+        }
+        #discuss .details .gravatar-emblem {
+            border: .1em solid #0a0a0a;
+            vertical-align: middle;
+            margin: -.2em .125em 0 0;
+        }
+        #discuss .details ul {
+            margin: 1em 0 0;
+            font-size: .9em;
+            text-align: left;
+            line-height: 1.25em;
+            }
+            #discuss .details ul li {
+                list-style: none;
+                }
+                #discuss .details ul li strong {
+                    font-weight: normal;
+
+    }
+    #discuss .message {
+        padding: .5em .8125em;
+        margin: 0 0 0 16em;
+}	
+#progress {
+    }
+    #progress .milestone {
+        margin: 0 0 2em;
+        }
+        #progress .milestone h2 {
+            float: left;
+            width: 10em;
+            height: 4em;
+            padding: .3625em;
+        }
+        #progress .milestone .info {
+            display: block;
+            font-size: 1.25em;
+            padding-left: 26em;
+            padding: .6em;
+            }
+            #progress .milestone .info span {
+            }
+            #progress .milestone .info span.bad {
+                color: #FF2E99;
+        }
+        #progress .milestone .description {
+            float: left;
+            width: 40em;
+            margin-bottom: 2em;
+        }
+        #progress .milestone .progress-bar {
+            }
+            #progress .milestone .progress-bar div {
+                background: #CAFF2A;
+                line-height: 1.5em;
+                color: #111;
+                text-align: right;
+                }
+                #progress .milestone .progress-bar div span {
+                    margin: 0 .3em;
+                    font-size: .9em;
+    }
+    #progress .milestone.current {
+        background: #ccc;
+    }
+    #progress table.tickets {
+        width: 100%;
+        margin-bottom: 3em;
+        }
+        #progress table.tickets th {
+            background: #666;
+            padding: .25em .75em;
+            color: #aaa;
+        }
+        #progress table.tickets td {
+            padding: .25em .75em;
+        }
+        #progress table.tickets td.main {
+            background: #0e0e0e;
+            font-size: 1.25em;
+            padding: .5em .75em;
+            }
+            #progress table.tickets td.main .sub {
+                display: block;
+                font-size: .7em;
+            }
+            #progress table.tickets td.main .gravatar-emblem {
+                margin: -.25em .1em 0 .25em;
+        }
+        #progress table.tickets td .declined {
+            color: #ff2e99;
+        }
+        #progress table.tickets td .new {
+            color: #ff8a2d;
+        }
+        #progress table.tickets td .open {
+            color: #ffe12a;
+        }
+        #progress table.tickets td .resolved {
+            color: #caff2a;
+        }
+        #progress table.tickets td .invalid {
+            color: #1fb5ff;
+        }
+        #progress table.tickets td .gravatar-emblem {
+            border: .1em solid #000;
+            vertical-align: middle;
+            margin: -.15em .25em 0 0;
+    }
+    #progress .ticket {
+        margin-bottom: 2em;
+        }
+        #progress .ticket h1 .number {
+            margin: -.15em 0 0 0;
+            float: left;
+            padding: .125em .625em;
+            vertical-align: middle;
+            font-size: .625em;
+            background: #0a0a0a;
+            float: right;
+        }
+        #progress .ticket .user-info {
+            float: right;
+            width: 64px;
+            padding: 1em;
+            background: #080808;
+            }
+            #progress .ticket .user-info span.name {
+                font-size: .9em;
+                display: block;
+                text-align: center;
+        }
+        #progress .ticket .description {
+            background: #0c0c0c;
+            padding: 1em;
+    }
+    #progress .revisions,
+    #extend .notes {
+        margin: 0 0 4em;
+        }
+        #progress .revisions li.revision,
+        #extend .notes li.note {
+            list-style: none;
+            margin-bottom: 2em;
+            }
+            #progress .revisions li .user,
+            #extend .notes li .user {
+                background: #0c0c0c;
+                padding: .25em .75em .25em .5em;
+                }
+                #progress .revisions li .user .gravatar-emblem,
+                #extend .notes li .user .gravatar-emblem {
+                    vertical-align: middle;
+                    margin: -.25em .125em 0 0;
+            }
+            #progress .revisions li .changes {
+                margin: 0 0 1em 2em;
+                }
+                #progress .revisions li .changes li {
+                    padding: .25em .5em;
+                    list-style: none;
+                }
+                #progress .revisions li .changes li.odd {
+                    background: #0f0f0f;
+                    border-bottom: .1em solid #171717;
+                }
+                #progress .revisions li .changes li.even {
+                    background: #131313;
+                    border-bottom: .1em solid #171717;
+            }
+            #progress .revisions li .body,
+            #progress .revisions li .attachments,
+            #extend .notes li .body,
+            #extend .notes li .attachments {
+                margin-left: 2em;
+}

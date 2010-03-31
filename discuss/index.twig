@@ -1,0 +1,7 @@
+{% extends "layouts/discuss.twig" %}
+
+{% block content %}
+{% for forum in forums %}
+{% include "partials/forum.twig" %}
+{% endfor %}
+{% endblock %}
